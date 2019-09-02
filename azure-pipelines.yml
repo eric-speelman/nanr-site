@@ -9,8 +9,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+steps:
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/dist'
-    ArtifactName: 'nanr'
+    ArtifactName: 'nanr-site'
     publishLocation: 'Container'
