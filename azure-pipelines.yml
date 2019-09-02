@@ -12,6 +12,6 @@ pool:
 steps:
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)/dist'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)'
     ArtifactName: 'nanr-site'
     publishLocation: 'Container'
