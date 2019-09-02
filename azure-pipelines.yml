@@ -4,14 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- test
 
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)/dist'
+    ArtifactName: 'nanr'
+    publishLocation: 'Container'
