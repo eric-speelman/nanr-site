@@ -4,14 +4,19 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- test
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: ArchiveFiles@2
+- task: DeleteFiles@1
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
+    SourceFolder: '.git'
+    Contents: '/*'
+    RemoveSourceFolder: true
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)'
+    ArtifactName: 'nanr-site'
+    publishLocation: 'Container'
