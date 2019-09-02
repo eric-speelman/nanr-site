@@ -1,6 +1,13 @@
 <html>
     <head></head>
     <body>
-        <p>Stand</p>
+        <iframe src="http://localhost:4200/stand" id='stand'></iframe>
+        <script>
+            let parts = window.location.href.split('/');
+            let user = parts[parts.length - 1];
+            const stand = document.getElementById('stand');
+            console.log(user)
+            stand.setAttribute('src') = 'http://localhost:4200/s/' + user;
+        </script>
     </body>
 </html>
