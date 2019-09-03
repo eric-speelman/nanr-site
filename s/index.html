@@ -12,12 +12,11 @@
         </style>
     </head>
     <body>
-        <iframe id='stand' scrolling="no" frameborder=="0"></iframe>
+        <iframe id="stand" scrolling='no' frameborder=0></iframe>
         <script>
             let user = getUrlParameter('user');
-            const stand = document.getElementById('stand');
-            console.log(user)
-            stand.setAttribute('src', 'http://localhost:4200/s/' + user);
+            let stand = document.getElementById('stand');
+            stand.src = 'http://localhost:4200/s/' + user;
 
             function getUrlParameter(name) {
                 name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
@@ -26,5 +25,6 @@
                 return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
             }
         </script>
+        <script src="http://localhost:4200/assets/tags/nanr.js"></script>
     </body>
 </html>
