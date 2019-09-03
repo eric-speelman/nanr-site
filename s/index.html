@@ -15,6 +15,13 @@
         <iframe id="stand" scrolling='no' frameborder=0></iframe>
         <script>
             let user = getUrlParameter('user');
+            if (!user) {
+                let hrefParts = window.location.href.toLowerCase().split('/');
+                if (hrefParts[hrefParts.length - 2] === 's') {
+                    user = hrefParts[hrefParts.length - 1];
+                }
+            }
+            console.log(user);
             let stand = document.getElementById('stand');
             stand.src = 'http://localhost:4200/s/' + user;
 
