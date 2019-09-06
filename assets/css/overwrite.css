@@ -221,10 +221,6 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
 	font-size: 13px;
-	border:none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
 }
 
 textarea:focus,

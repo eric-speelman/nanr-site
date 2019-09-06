@@ -74,7 +74,11 @@ img.left {
   letter-spacing: -2px;
 }
 
-
+#intro h1 {
+	font-size: 46px;
+	line-height: 1;
+	letter-spacing: -2px;
+  }
 
 /* logo */
 .logo a,.logo a:hover {
@@ -2448,6 +2452,10 @@ img.alignright{
 
 	.subfooter p {
 		text-align:center;
+	}
+
+	.contact {
+		width: 300px
 	}
 
 

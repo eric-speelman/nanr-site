@@ -2,21 +2,7 @@ jQuery(document).ready(function ($) {
 
   // make code pretty
   window.prettyPrint && prettyPrint();
-
-
-  $('.accordion').on('show', function (e) {
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-caret-right');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-caret-down');
-  });
-
-  $('.accordion').on('hide', function (e) {
-    $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-    $(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-aret-down');
-    $(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-caret-right');
-  });
-
-
+  
   (function () {
 
     var $menu = $('nav'),
@@ -53,7 +39,7 @@ jQuery(document).ready(function ($) {
   });
 
   //add some elements with animate effect
-  $(".features").hover(
+  /*$(".features").hover(
     function () {
       $(this).find('.icon').addClass("animated fadeInUp");
       $(this).find('a.btn').addClass("animated fadeInRight");
@@ -64,7 +50,7 @@ jQuery(document).ready(function ($) {
       $(this).find('a.btn').removeClass("animated fadeInRight");
       $(this).find('.features_content').removeClass("animated fadeInDown");
     }
-  );
+  );*/
 
   $(".cta-box").hover(
     function () {
@@ -124,13 +110,4 @@ jQuery(document).ready(function ($) {
     startAt: 0,
     slideshow: true
   });
-
-  $('#images').refineSlide({
-    transition: 'random',
-    autoPlay: true,
-    useThumbs: false
-
-  });
-
-
 });
