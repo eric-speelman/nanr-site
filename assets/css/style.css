@@ -2453,10 +2453,9 @@ img.alignright{
 	.subfooter p {
 		text-align:center;
 	}
-
-	.contact {
-		width: 300px
-	}
+}
 
 
+#sent {
+	display: none;
 }

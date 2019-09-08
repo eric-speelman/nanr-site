@@ -25,10 +25,6 @@
 
   <!-- fav and touch icons -->
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
   <!-- =======================================================
     Theme Name: Plato
@@ -152,14 +148,21 @@
       </div>
       <div class="row">
           <div class="span12">
-            <form>
+            <form id="signupForm">
               <div class="form-group">
                 <label for="email" >Email</label>
-                <input type="email" class="form-control contact" id="email" placeholder="Enter Email"/>
+                <input type="email" class="form-control contact" id="email" placeholder="Enter Email" />
               </div>
-              <div>
-              <textarea id="message"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Enter Message" id="message" cols="80" style="width: 400px; height: 300px"></textarea>
+                <div class="cta">
+                  <button class="btn btn-large btn-rounded btn-color" id="signup">
+                    <i class="icon-chevron-right"></i> Send</button>
+                  </div>
             </form>
+            <div id="sent">
+              <h2>Thank you for getting in touch. We'll get back to you shortly.</h2>
+            </div>
           </div>
       </div>
     </div>
@@ -205,6 +208,27 @@
 
   <!-- Template Custom Javascript File -->
   <script src="assets/js/custom.js"></script>
+  <script>
+    $(document).ready(() => {
+      $('#signup').click(() => {
+        const body = {
+          email: $('#email').val(),
+          message: $('#message').val()
+        }
+        $('#signup').attr('disabled', true);
+        $.ajax({
+          url: 'http://localhost:5000/api/contact',
+          type: 'POST',
+          data: JSON.stringify(body),
+          contentType: 'application/json',
+          success: () => {
+            $('#sent').css('display', 'initial');
+            $('#signupForm').css('display', 'none');
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
