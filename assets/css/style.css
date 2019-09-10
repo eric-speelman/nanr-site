@@ -296,7 +296,7 @@ section#subintro {
 	top: 0px;
 }
 .features .features_content {
-	padding-left: 150px;
+	padding-left: 140px;
 }
 
 /* divider */
@@ -2458,4 +2458,13 @@ img.alignright{
 
 #sent {
 	display: none;
+}
+
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
 }
