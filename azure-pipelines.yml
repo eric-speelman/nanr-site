@@ -7,7 +7,7 @@ trigger:
 - test
 
 pool:
-  vmImage: 'master-latest'
+  vmImage: 'windows-latest'
 
 steps:
 - task: DeleteFiles@1
