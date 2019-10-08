@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section id="subintro">
+    <div class="container">
+      <div class="row">
+        <div class="span8">
+          <h3>{{ .Params.header }}</h3>
+        </div>
+        <div class="span4">
+          <ul class="breadcrumb notop">
+            <li><a href="/">Home</a><span class="divider">/</span></li>
+            <li class="active">{{ .Params.crumb }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="maincontent">
+  {{ .Content }}
+  </section>
+{{ end }}
