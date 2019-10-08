@@ -18,5 +18,5 @@ steps:
     
 - task: HugoTask@1
   inputs:
-    source: 
+    source: '/'
     destination: '$(System.DefaultWorkingDirectory)/nanr-site'
