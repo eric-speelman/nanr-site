@@ -15,8 +15,8 @@ steps:
     SourceFolder: '.git'
     Contents: '/*'
     RemoveSourceFolder: true
-- task: PublishBuildArtifacts@1
+    
+- task: HugoTask@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
-    ArtifactName: 'nanr-site'
-    publishLocation: 'Container'
+    source: 
+    destination: '$(System.DefaultWorkingDirectory)/nanr-site'
