@@ -18,9 +18,9 @@ steps:
     
 - task: HugoTask@1
   inputs:
-    destination: '$(System.DefaultWorkingDirectory)/nanr-site'
+    destination: 'public'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
+    PathtoPublish: '$(System.DefaultWorkingDirectory)\public'
     ArtifactName: 'nanr-site'
     publishLocation: 'Container'
