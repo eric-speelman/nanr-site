@@ -4,10 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+- test
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'master-latest'
 
 steps:
 - task: DeleteFiles@1
