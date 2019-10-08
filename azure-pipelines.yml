@@ -20,3 +20,8 @@ steps:
   inputs:
     source: '/'
     destination: '$(System.DefaultWorkingDirectory)/nanr-site'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(System.DefaultWorkingDirectory)'
+    ArtifactName: 'nanr-site'
+    publishLocation: 'Container'
