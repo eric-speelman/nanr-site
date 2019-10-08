@@ -18,7 +18,6 @@ steps:
     
 - task: HugoTask@1
   inputs:
-    source: '/'
     destination: '$(System.DefaultWorkingDirectory)/nanr-site'
 - task: PublishBuildArtifacts@1
   inputs:
