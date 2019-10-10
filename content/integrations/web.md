@@ -13,7 +13,7 @@ header = "Blog or Website"
     <iframe src="https://app.nanr.io/assets/tags/button.html?demo=true" scrolling="no" width="140" height="140" ></iframe>
     <p>Nanr can be used in addition to or instead of other monetization methods.</p>
     <p>With Nanr you can directly monetize your great content.
-    <p>Clicking on the Nanr button will never direct a user away from your page. In the event they click it and don't have an account a partial overlay will popup with a signup form. It features a prominent X in the top right which will immediatly close it if they deciade they would rather not create an account. Check it out below!</p>
+    <p>Clicking on the Nanr button will never direct a user away from your page. In the event they click it and don't have an account a partial overlay will popup with a signup form. It features a prominent X in the top right which will immediately close it if they decide they would rather not create an account. Check it out below!</p>
     <p>Have any questions? Feel free to send us an email at <a href="mailto:contact@nanr.io">contact@nanr.io</a> or head over to our <a href="/contact">contact form</a></p>
     <div class="cta">
         <a class="btn btn-xlarge btn-rounded btn-color btn-block" href="http://app.nanr.io/account/signup" id="signup">

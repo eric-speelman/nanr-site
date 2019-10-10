@@ -5,7 +5,7 @@ header = "Frequently Asked Questions"
 <div class="container">
     <p>
         <div class="question">What is a Nanr?</div>
-        <div>A Nanr is a digital token that can be purchased for abour $0.25 and later sold back to nanr</div>
+        <div>A Nanr is a digital token that can be purchased for about $0.25 and later sold back to nanr</div>
     </p>
     <p>
         <div class="question">Why would I want to buy Nanrs?</div>
